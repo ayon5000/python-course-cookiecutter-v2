@@ -43,6 +43,10 @@ jobs:
         uses: actions/setup-python@v3
         with:
           python-version: 3.8
+      - name: Configure GIT CLI
+        run: |
+            git config --global user.email "git-bot-user@example.com"
+            git config --global user.name "Git Bot"
       - name: Execute Tests
         run: |
           make install
