@@ -43,7 +43,7 @@ jobs:
         uses: actions/setup-python@v3
         with:
           python-version: 3.8
-      - name: Lint, Format, and other static code quality checks
+      - name: Execute Tests
         run: |
           make install
           make test

@@ -20,5 +20,5 @@ execute-tests:
 lint:
 	bash run.sh lint
 
-run-tests:
+test:
 	bash run.sh run-tests
