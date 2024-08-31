@@ -32,6 +32,8 @@ disable = [
     "redefined-outer-name",
 ]
 
+#Added to fix the issue with modules being found in two places
+#https://stackoverflow.com/questions/63871252/source-file-found-twice-error-with-mypy-0-780-in-python-for-vscode
 [tool.mypy]
 explicit_package_bases = false
 no_namespace_packages = true
