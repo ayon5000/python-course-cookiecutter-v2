@@ -8,6 +8,7 @@ from uuid import uuid4
 
 import pytest
 
+# pylint: disable=no-name-in-module
 from tests.utils.project import (
     generate_project,
     initialize_git_repo,
