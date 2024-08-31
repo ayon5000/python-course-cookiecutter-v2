@@ -1,3 +1,5 @@
+"""Pytest configuration file; is executed before test collection."""
+
 import sys
 from pathlib import Path
 

@@ -1,3 +1,5 @@
+"""Functions for creating a cookiecut project to be used in tests."""
+
 import json
 import subprocess
 from copy import deepcopy
@@ -8,6 +10,7 @@ from tests.consts import PROJECT_DIR
 
 
 def initialize_git_repo(repo_dir: Path):
+    """Doc String."""
     # git init
     # commit the contents to the main branch
     subprocess.run(["git", "init"], cwd=repo_dir, check=True)
@@ -16,12 +19,9 @@ def initialize_git_repo(repo_dir: Path):
     subprocess.run(["git", "commit", "-m", "'feat: initial commit by pytest'"], cwd=repo_dir, check=True)
 
 
-def generate_project(template_values: Dict[str, str], test_session_id: str):
-    """
-
-    execute: `cookiecutter <template directory> ...`
-    """
-    template_values: Dict[str, str] = deepcopy(template_values)
+def generate_project(template_values_inp: Dict[str, str], test_session_id: str):
+    """execute: `cookiecutter <template directory> ...`."""
+    template_values: Dict[str, str] = deepcopy(template_values_inp)
     cookiecutter_config = {"default_context": template_values}
 
     cookiecutter_config_fpath = PROJECT_DIR / f"tests/cookiecutter-{test_session_id}.json"

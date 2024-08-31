@@ -8,7 +8,7 @@ force-exclude = """venv"""
 
 [tool.flake8]
 docstring-convention = "all"
-ignore = ["D107", "D212", "E501", "W503", "W605", "D203", "D100"]
+ignore = ["D107", "D212", "E501", "W503", "W605", "D203", "D100", "D212"]
 exclude = ["venv"]
 max-line-length = 119
 
@@ -31,6 +31,10 @@ disable = [
     "too-few-public-methods",
     "redefined-outer-name",
 ]
+
+[tool.mypy]
+explicit_package_bases = false
+no_namespace_packages = true
 
 [tool.ruff]
 # Enable flake8-bugbear (`B`) rules.
