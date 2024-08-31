@@ -1,1 +1,6 @@
-{"default_context": {"repo_name": "test-repo-name"}}
+{
+    "default_context": {
+        "repo_name": "test-repo-name",
+        "package_import_name": "example_package"
+    }
+}
